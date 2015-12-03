@@ -17,8 +17,6 @@ Vagrant.configure("2") do |config|
       host_config.vm.hostname = "#{name}.internal"
       host_config.vm.network :private_network, ip: host[:ip]
 
-#      host_config.vm.synced_folder '.', '/usr/lib/vagrant'
-
       host_config.vm.provider :virtualbox do |vb|
         vb.customize ["modifyvm", :id,
                       "--name", name,
@@ -28,6 +26,7 @@ Vagrant.configure("2") do |config|
 
       # start bash as a non-login shell to prevent 'stdin: is not a tty' error
       config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+      config.vm.provision "shell", inline: "cp /vagrant/hiera.yaml /etc/puppet/hiera.yaml"
 
       config.vm.provision "puppet" do |puppet|
         puppet.manifests_path = "manifests"

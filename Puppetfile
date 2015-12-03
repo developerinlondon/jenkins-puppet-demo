@@ -24,4 +24,6 @@ forge "https://forgeapi.puppetlabs.com"
 # A module from Github pre-packaged tarball
 # mod 'puppetlabs-apache', '0.6.0', :github_tarball => 'puppetlabs/puppetlabs-apache'
 
-mod 'rtyler/jenkins'
+mod 'rtyler/jenkins',
+	:git => 'https://github.com/developerinlondon/puppet-jenkins',
+	:ref => 'feature/fix-deprecation-warnings'
