@@ -1,0 +1,4 @@
+---
+:cpu: 2
+:memory: 1024
+:env: vagrant

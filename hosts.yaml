@@ -1,0 +1,9 @@
+---
+jenkins:
+  :ip: '10.16.32.11'
+  :forward_from: 8080
+  :forward_to: 8042
+gitserver:
+  :ip: '10.16.32.21'
+db:
+  :ip: '10.16.32.31'
