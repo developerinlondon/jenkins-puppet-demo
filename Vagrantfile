@@ -34,9 +34,7 @@ Vagrant.configure("2") do |config|
         puppet.module_path = ['modules']
         puppet.options = "--verbose"
       end
-      if (defined?(host[:forward_from])).nil?
-        config.vm.network "forwarded_port", guest: host[:forward_from], host: host[:forward_to]
-      end
+
     end
   end
 end

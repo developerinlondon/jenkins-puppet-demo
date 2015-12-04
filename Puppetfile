@@ -27,3 +27,10 @@ forge "https://forgeapi.puppetlabs.com"
 mod 'rtyler/jenkins',
 	:git => 'https://github.com/developerinlondon/puppet-jenkins',
 	:ref => 'feature/fix-deprecation-warnings'
+
+mod 'puppetlabs/postgresql'
+
+mod 'sbadia/gitlab'
+mod 'alup/rbenv'
+mod 'sbadia/gitlab_requirements',
+    :git  => 'git://github.com/sbadia/puppet-gitlab-requirements'
